@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー｜くるりえ</title>
+<meta name="description" content="パズルゲーム「くるりえ」のプライバシーポリシー。記録は端末の中に保存し、独自のサーバーは持ちません。">
+<style>
+  /* 配色はアプリ本体（lib/theme/app_theme.dart）の藍と和紙に合わせている。
+     フォントは端末に入っているものだけを使い、外部から何も読み込まない
+     （ページを開いただけで第三者へ通信が飛ばないようにするため）。 */
+  :root {
+    --paper: #eff4fc;
+    --paper-light: #f8faff;
+    --ink: #24406b;
+    --ink-dark: #1a3157;
+    --sumi: #1b2431;
+    --haze: #5a6b82;
+    --hairline: rgba(36, 64, 107, 0.16);
+    --faint: rgba(36, 64, 107, 0.05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #141c28;
+      --paper-light: #1b2431;
+      --ink: #a8c2e8;
+      --ink-dark: #cfdcf2;
+      --sumi: #e6ecf6;
+      --haze: #94a5bd;
+      --hairline: rgba(168, 194, 232, 0.22);
+      --faint: rgba(168, 194, 232, 0.07);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 20px 48px;
+    background: var(--paper);
+    color: var(--sumi);
+    font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP",
+                 "Yu Gothic Medium", "Yu Gothic", Meiryo, system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.9;
+    -webkit-text-size-adjust: 100%;
+  }
+  .sheet {
+    max-width: 720px;
+    margin: 40px auto 0;
+    background: var(--paper-light);
+    border: 1px solid var(--hairline);
+    border-radius: 14px;
+    padding: 40px 32px 44px;
+    box-shadow: 0 10px 30px rgba(27, 36, 49, 0.08);
+  }
+  header { border-bottom: 2px solid var(--hairline); padding-bottom: 20px; }
+  .app { font-size: 14px; letter-spacing: 0.24em; color: var(--haze); margin: 0 0 6px; }
+  h1 { font-size: 26px; line-height: 1.5; margin: 0 0 12px; color: var(--ink-dark); font-weight: 700; }
+  .dates { font-size: 13px; color: var(--haze); margin: 0; }
+  h2 {
+    font-size: 18px;
+    margin: 40px 0 12px;
+    padding-left: 12px;
+    border-left: 4px solid var(--ink);
+    color: var(--ink-dark);
+    line-height: 1.6;
+  }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.4em; }
+  li { margin-bottom: 6px; }
+  a { color: var(--ink); }
+  .lead, .contact {
+    background: var(--faint);
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0 8px;
+  }
+  .lead p:last-child, .contact p:last-child { margin-bottom: 0; }
+  .contact .mail { font-size: 18px; font-weight: 600; word-break: break-all; }
+  @media (max-width: 600px) {
+    body { padding: 0 12px 32px; font-size: 15px; }
+    .sheet { padding: 28px 20px 32px; margin-top: 20px; border-radius: 12px; }
+    h1 { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+<main class="sheet">
+  <header>
+    <p class="app">くるりえ</p>
+    <h1>プライバシーポリシー</h1>
+    <p class="dates">最終更新日：2026年9月2日</p>
+  </header>
+
+  <div class="lead">
+    <p>パズルゲーム「くるりえ」（以下「本アプリ」）は、<strong>独自のサーバーを持たず、利用者の個人情報を集めることも、第三者へ販売・提供することもありません。</strong>遊んだ記録は端末の中に保存します。オンラインランキングを使うときにかぎり、Apple の Game Center へ得点と難易度を送ります。</p>
+  </div>
+
+  <h2>1. 端末の中に保存する情報</h2>
+  <p>ゲームを続けて遊べるようにするため、次の情報を<strong>お使いの端末の中だけ</strong>に保存します（iOS の標準的な保存領域を使います）。いずれも個人を特定できる情報ではなく、外部へ送信することも、作者が見ることもありません。</p>
+  <ul>
+    <li>モード・難易度ごとの最高点</li>
+    <li>プレイ履歴（日時・モード・難易度・得点・クリアしたステージ数）</li>
+    <li>難易度の設定、効果音・BGM の ON／OFF</li>
+    <li>中断したゲームの途中経過</li>
+  </ul>
+  <p>最高点とプレイ履歴は、アプリの「設定」＞「記録を消す」からいつでも消せます。本アプリを端末から削除した場合は、上記のすべてが消去されます。<strong>消した記録を元に戻すことはできません。</strong></p>
+
+  <h2>2. Game Center へ送る情報</h2>
+  <p>オンラインランキングには、Apple の <strong>Game Center</strong> を利用します。Game Center にサインインした状態で「じっくり」「2分アタック」を遊び終えたとき、またはランキング画面で「更新」を押して過去の記録を送り直したときに、次の情報が Apple のサーバーへ送られます。</p>
+  <ul>
+    <li><strong>得点</strong>（モードごとのランキングに載る点）</li>
+    <li><strong>その得点を取ったときの難易度</strong>（やさしい／ふつう／むずかしいの区別を表す数値）</li>
+  </ul>
+  <p>これらは、Apple が管理する<strong>プレイヤー識別子</strong>に紐づいて記録されます。ランキングに並ぶ名前は <strong>Game Center のニックネーム</strong>で、本アプリは独自のニックネームを持たず、利用者の名前を預かることもありません。<strong>「練習」モードは記録を取らないため、何も送信しません。Game Center にサインインしていない場合も、何も送信しません。</strong></p>
+  <p>送信された情報は Apple のプライバシーポリシー（<a href="https://www.apple.com/legal/privacy/ja/">https://www.apple.com/legal/privacy/ja/</a>）に従って取り扱われ、<strong>作者のもとに集まることはありません。</strong>サインアウトや利用の制限は、iOS の「設定」＞「Game Center」および「スクリーンタイム」から行えます。</p>
+
+  <h2>3. 集めない情報</h2>
+  <p>本アプリは次のいずれも取得しません。年齢や生年月日を尋ねることもありません。</p>
+  <ul>
+    <li>氏名、住所、電話番号、メールアドレスなどの連絡先</li>
+    <li>位置情報</li>
+    <li>カメラ、マイク、写真、連絡先、カレンダーなどの端末データ</li>
+    <li>広告の表示、広告識別子（IDFA）を用いたトラッキング、アプリ内課金</li>
+    <li>アクセス解析・行動ログ（アナリティクスや他社のトラッキング SDK を組み込んでいません）</li>
+  </ul>
+  <p>また、作者が運営するサーバーやデータベースを一切持ちません。上記の Game Center への送信を除き、本アプリが外部と通信することはありません。本アプリはオープンソースの部品を利用していますが、いずれも端末内の処理に使うもので、外部へ情報を送るものではありません。</p>
+
+  <h2>4. このポリシーの変更</h2>
+  <p>本ポリシーは、法令の変更や本アプリの機能追加にあわせて改定することがあります。重要な変更があった場合は、このページの最終更新日を改めます。</p>
+
+  <h2>5. お問い合わせ</h2>
+  <p>本アプリおよび本ポリシーに関するお問い合わせは、次のアドレスまでご連絡ください。</p>
+  <div class="contact">
+    <p class="mail"><a href="mailto:dev.az.contact@gmail.com">dev.az.contact@gmail.com</a></p>
+  </div>
+</main>
+</body>
+</html>
