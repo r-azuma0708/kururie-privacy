@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>サポート｜くるりえ</title>
+<meta name="description" content="パズルゲーム「くるりえ」のサポートページ。遊びかたの要約、よくある質問、お問い合わせ先。">
+<style>
+  /* 配色・書体はプライバシーポリシー（privacy.html）と同じものを使う。
+     外部から何も読み込まない（ページを開いただけで第三者へ通信が飛ばないため）。 */
+  :root {
+    --paper: #eff4fc;
+    --paper-light: #f8faff;
+    --ink: #24406b;
+    --ink-dark: #1a3157;
+    --sumi: #1b2431;
+    --haze: #5a6b82;
+    --hairline: rgba(36, 64, 107, 0.16);
+    --faint: rgba(36, 64, 107, 0.05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #141c28;
+      --paper-light: #1b2431;
+      --ink: #a8c2e8;
+      --ink-dark: #cfdcf2;
+      --sumi: #e6ecf6;
+      --haze: #94a5bd;
+      --hairline: rgba(168, 194, 232, 0.22);
+      --faint: rgba(168, 194, 232, 0.07);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 20px 48px;
+    background: var(--paper);
+    color: var(--sumi);
+    font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP",
+                 "Yu Gothic Medium", "Yu Gothic", Meiryo, system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.9;
+    -webkit-text-size-adjust: 100%;
+  }
+  .sheet {
+    max-width: 720px;
+    margin: 40px auto 0;
+    background: var(--paper-light);
+    border: 1px solid var(--hairline);
+    border-radius: 14px;
+    padding: 40px 32px 44px;
+    box-shadow: 0 10px 30px rgba(27, 36, 49, 0.08);
+  }
+  header { border-bottom: 2px solid var(--hairline); padding-bottom: 20px; }
+  .app { font-size: 14px; letter-spacing: 0.24em; color: var(--haze); margin: 0 0 6px; }
+  h1 { font-size: 26px; line-height: 1.5; margin: 0 0 12px; color: var(--ink-dark); font-weight: 700; }
+  .dates { font-size: 13px; color: var(--haze); margin: 0; }
+  h2 {
+    font-size: 18px;
+    margin: 40px 0 12px;
+    padding-left: 12px;
+    border-left: 4px solid var(--ink);
+    color: var(--ink-dark);
+    line-height: 1.6;
+  }
+  h3 { font-size: 16px; margin: 26px 0 6px; color: var(--ink-dark); line-height: 1.6; }
+  p { margin: 0 0 14px; }
+  ul, ol { margin: 0 0 14px; padding-left: 1.4em; }
+  li { margin-bottom: 6px; }
+  a { color: var(--ink); }
+  .lead, .contact {
+    background: var(--faint);
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0 8px;
+  }
+  .lead p:last-child, .contact p:last-child { margin-bottom: 0; }
+  .contact .mail { font-size: 18px; font-weight: 600; word-break: break-all; }
+  @media (max-width: 600px) {
+    body { padding: 0 12px 32px; font-size: 15px; }
+    .sheet { padding: 28px 20px 32px; margin-top: 20px; border-radius: 12px; }
+    h1 { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+<main class="sheet">
+  <header>
+    <p class="app">くるりえ</p>
+    <h1>サポート</h1>
+    <p class="dates">最終更新日：2026年9月12日</p>
+  </header>
+
+  <div class="lead">
+    <p>パズルゲーム「くるりえ」についての、遊びかたの要約とよくある質問です。ここで解決しないことは、<a href="#contact">お問い合わせ</a>からご連絡ください。</p>
+  </div>
+
+  <h2>遊びかた</h2>
+  <p>半透明の「札」を 3×3 の盤に置き、点線で示された<strong>お題の形</strong>にぴったり合わせるパズルです。</p>
+  <ul>
+    <li>手札を選び、盤をタップして置きます。</li>
+    <li>置いた札は <strong>↻</strong> で 90 度ずつ回せます。<strong>↻ を長押しすると逆回り</strong>に回るので、行き過ぎたときに押し直さずに戻せます。</li>
+    <li>札は<strong>重ねてもかまいません</strong>。数字の入ったマスは、その枚数ちょうど重なっている必要があります。</li>
+    <li>お題の外に<strong>はみ出すと</strong>クリアになりません（盤が紅で知らせます）。</li>
+    <li>置いた札はもう一度タップすると外せます。盤を長押しすると全部外せます。</li>
+    <li>速く解くほど得点が伸びます。</li>
+  </ul>
+
+  <h3>モード</h3>
+  <ul>
+    <li><strong>じっくり</strong>：お題ごとに持ち時間があります。解くほど次のステージへ進みます。</li>
+    <li><strong>2分アタック</strong>：全体で 120 秒。解いた数だけ点を積みます。</li>
+    <li><strong>練習</strong>：時間制限なし。記録も得点表示もありません。ポーズの「答えを見る」で答えを出せます。</li>
+  </ul>
+
+  <h3>難易度</h3>
+  <p>「やさしい」「ふつう」「むずかしい」の3つがあり、トップ画面の帯でいつでも変えられます。「むずかしい」の後半には、置いた札が盤に映らない<strong>くらやみ</strong>のステージが挟まります。</p>
+
+  <h2>よくある質問</h2>
+
+  <h3>ランキングに順位が出ません</h3>
+  <p>ランキングは Apple の <strong>Game Center</strong> を使っています。次を確かめてください。</p>
+  <ol>
+    <li>iOS の「設定」＞「Game Center」でサインインしているか。</li>
+    <li>ネットワークにつながっているか（圏内か）。</li>
+    <li>「じっくり」「2分アタック」を1回遊び終えているか（<strong>練習は記録を送りません</strong>）。</li>
+  </ol>
+  <p>ランキングは、トップ画面の下にある帯の「順位」から開きます。サインインし直したあとは、ランキング画面の「更新する」で、端末に残っている記録をまとめて送り直せます。Game Center にサインインしていなくても、ゲームはこれまでどおり遊べます。</p>
+
+  <h3>最高点や記録が消えました</h3>
+  <p>記録は<strong>お使いの端末の中だけ</strong>に保存しています。アプリを削除する、端末を初期化する、機種変更する、といった場合は記録が消え、元に戻すことはできません。</p>
+  <p>また、得点の計算方法を変える更新のあとは、<strong>比べられなくなった最高点を数えなおします</strong>。そのときは起動時に一度だけその旨をお知らせします。プレイ履歴は消えません。</p>
+
+  <h3>アプリを終了させたゲームの記録はどうなりますか</h3>
+  <p>ステージをクリアするたびに途中経過を控えているので、iOS がバックグラウンドのアプリを終了させた回も、<strong>次の起動で記録に残ります</strong>。ポーズから「記録せずにやめる」を選んだ回は残りません。</p>
+
+  <h3>音が鳴りません</h3>
+  <p>トップ画面の下にある帯の「設定」を開き、「効果音・BGM」の ON／OFF を確かめてください。端末の消音スイッチやマナーモード、他のアプリの再生状況にも影響されます。</p>
+
+  <h3>記録を自分で消したい</h3>
+  <p>アプリの中に記録を消す操作はありません。端末に残る記録は、<strong>本アプリを端末から削除する</strong>と、設定もあわせてすべて消えます。<strong>消えた記録を元に戻すことはできません。</strong>なお、Game Center 側に送った順位は、iOS の「設定」＞「Game Center」から管理してください。</p>
+
+  <h3>広告や課金はありますか</h3>
+  <p>ありません。アプリ内課金・広告表示・トラッキングのいずれも行いません。詳しくは<a href="./">プライバシーポリシー</a>をご覧ください。</p>
+
+  <h2>動作環境</h2>
+  <p>iOS 13.0 以降の iPhone。縦向きでのみ動作します。ランキング（Game Center）の利用には iOS 14 以降とネットワーク接続が必要です。</p>
+
+  <h2 id="contact">お問い合わせ</h2>
+  <p>不具合のご報告には、<strong>アプリの「設定」＞「アプリ情報」に出ているバージョン</strong>、お使いの端末と iOS のバージョンを添えていただけると助かります。</p>
+  <div class="contact">
+    <p class="mail"><a href="mailto:dev.az.contact@gmail.com">dev.az.contact@gmail.com</a></p>
+  </div>
+
+  <p style="margin-top:32px"><a href="./">プライバシーポリシー</a></p>
+</main>
+</body>
+</html>
